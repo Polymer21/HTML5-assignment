@@ -7,19 +7,20 @@
 .site {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: .10fr .5fr .10fr .5fr .5fr .25fr .10fr .10fr;
+    grid-template-rows: .10fr auto .10fr .5fr .5fr .10fr .10fr;
     grid-template-areas:
     'nav nav'
     'main-head sidebar-head'
     'main-nom sidebar-main'
-    'main sidebar-main'
     'main sidebar-main'
     'main sidebar-footer'
     'main-footer sidebar-footer'
     'footer footer';
     width: 900px;
     background-color: white;
+    grid-gap: 10px 10px;
 }
+                                                /* Begin Nav */
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -81,12 +82,30 @@
     margin-bottom: 10px;
     
 }
-
-
+                                                    /*End Nav*/
+.body {
+    padding: 10px;
+}
 .bio {
     display: flex;
-    justify-content: flex-start;
+    align-items:flex-start;
     grid-area: main-head;
+    border: 2px;
+    border-color: grey;
+    border-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    grid-row-gap: 10px;
+}
+.bio-pic {
+    display: flex;
+    align-items: stretch;
+}
+.bio-p-1 {
+    font-size: 15px;
+}
+.bio-p-2 {
+    font-size: 15px;
 }
 .nom {
     grid-area: main-nom;
