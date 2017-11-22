@@ -1,7 +1,13 @@
+.site-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    background-color: grey;
+}
 .site {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: .10fr .5fr .5fr .25fr 1fr .25fr .10fr;
+    grid-template-rows: .10fr .5fr .5fr .10fr .5fr .5fr .25fr .10fr .10fr;
     grid-template-areas:
     'nav nav'
     'main-head sidebar-head'
@@ -9,11 +15,16 @@
     'main-nom sidebar-main'
     'main sidebar-main'
     'main sidebar-footer'
+    'main sidebar-footer'
     'main-footer sidebar-footer'
-    'footer footer'
+    'footer footer';
+    width: 900px;
+    background-color: white;
 }
 .nav {
     grid-area: nav;
+    background-color: lightcoral;
+    align-items: center;
 }
 .bio {
     grid-area: main-head;
