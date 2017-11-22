@@ -22,13 +22,68 @@
     background-color: white;
 }
 .nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-area: nav;
     background-color: lightcoral;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
+    grid-template-areas: 
+    'imdb movies celebs news watchlist';
+
 }
+
+.nav a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.imdb-nav {
+    grid-area: imdb;
+    justify-self: center;
+    align-self: center;
+}
+
+.movies-nav {
+    grid-area: movies;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10px;
+}
+
+.celebs-nav {
+    grid-area: celebs;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10px;
+    
+}
+
+.news-nav {
+    grid-area: news;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10px;
+    
+}
+
+.watchlist-nav {
+    grid-area: watchlist;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10px;
+    
+}
+
+
 .bio {
     grid-area: main-head;
 }
