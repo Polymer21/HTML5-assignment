@@ -22,9 +22,12 @@
     background-color: white;
 }
 .nav {
+    display: flex;
     grid-area: nav;
     background-color: lightcoral;
+    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 .bio {
     grid-area: main-head;
