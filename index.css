@@ -1,0 +1,42 @@
+.site {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: .10fr .5fr .5fr .25fr 1fr .25fr .10fr;
+    grid-template-areas:
+    'nav nav'
+    'main-head sidebar-head'
+    'main-head sidebar-main'
+    'main-nom sidebar-main'
+    'main sidebar-main'
+    'main sidebar-footer'
+    'main-footer sidebar-footer'
+    'footer footer'
+}
+.nav {
+    grid-area: nav;
+}
+.bio {
+    grid-area: main-head;
+}
+.nom {
+    grid-area: main-nom;
+}
+.filmography {
+    display: grid;
+    grid-area: main;
+}
+.quick-links {
+    grid-area: sidebar-head;
+}
+.sidebar-main {
+    grid-area: sidebar-main;
+}
+.related-news {
+    grid-area: sidebar-footer;
+}
+.contribute {
+    grid-area: main-footer;
+}
+.footer{
+    grid-area: footer;
+}
