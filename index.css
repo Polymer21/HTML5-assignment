@@ -38,7 +38,30 @@
 }
 .quick-links {
     grid-area: sidebar-head;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "main1 main2"
+    "main1 main2"
+    "main1 main2"
+    "footer footer";
+    border-style: solid;
+    border-color: lightblue;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+    
 }
+    .QL { 
+    grid-area: header;
+    }
+    .Explore {
+        grid-area: footer;
+    }
 .sidebar-main {
     grid-area: sidebar-main;
 }
