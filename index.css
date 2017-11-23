@@ -25,15 +25,14 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-area: nav;
-    background-color: lightcoral;
+    background: linear-gradient(grey, black);
     grid-template-areas: 
     'imdb movies celebs news watchlist';
-
 }
 
 .nav a:link {
     text-decoration: none;
-    color: black;
+    color: #e5e5e5;
 }
 
 .nav a:hover {
@@ -42,13 +41,14 @@
 
 .nav a:visited {
     text-decoration: none;
-    color: black;
+    color: #e5e5e5;
 }
 
 .imdb-nav {
     grid-area: imdb;
     justify-self: center;
     align-self: center;
+    font-size: 25px;
 }
 
 .movies-nav {
