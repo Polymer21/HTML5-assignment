@@ -7,7 +7,7 @@
 .site {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: .10fr .5fr .10fr .5fr .5fr .25fr .10fr .10fr;
+    grid-template-rows: .10fr .5fr .10fr .5fr .5fr .25fr .25fr .10fr;
     grid-template-areas:
     'nav nav'
     'main-head sidebar-head'
@@ -48,7 +48,7 @@
     grid-area: imdb;
     justify-self: center;
     align-self: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .movies-nav {
@@ -103,7 +103,38 @@
 }
 .related-news {
     grid-area: sidebar-footer;
+    background-color: lightgrey;
 }
+
+.related-news p{
+    margin-left: 10px;
+}
+
+.related-news1 {
+    background-color: #e8e8e8;
+    font-size: 15px;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.related-news2 {
+    background-color: #e8e8e8;
+    font-size: 15px;
+    margin: 10px;
+    padding: 2px;
+    border-radius:7px;
+}
+
+.related-news-info {
+    display: flex;
+}
+
+.related-news-title {
+    color: #7c6a00;
+    margin-left: 7px;
+}
+
 .contribute {
     grid-area: main-footer;
 }
