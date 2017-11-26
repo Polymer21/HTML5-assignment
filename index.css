@@ -83,9 +83,7 @@
     
 }
                                                     /*End Nav*/
-.body {
-    padding: 10px;
-}
+                                                   /*Begin Bio*/
 .bio {
     display: flex;
     align-items:flex-start;
@@ -107,6 +105,7 @@
 .bio-p-2 {
     font-size: 15px;
 }
+                                                     /*End Bio*/
 .nom {
     grid-area: main-nom;
 }
