@@ -39,6 +39,10 @@
     text-decoration: underline;
 }
 
+.nav .imdb-nav:hover {
+    text-decoration: none;
+}
+
 .nav a:visited {
     text-decoration: none;
     color: #e5e5e5;
@@ -188,4 +192,15 @@
 
 .footer{
     grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-first p {
+    margin: 5px;
 }
