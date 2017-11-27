@@ -7,23 +7,26 @@
 .site {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: .10fr .5fr .10fr .5fr .5fr .25fr .25fr .10fr;
+    grid-template-rows: .10fr auto auto auto auto auto auto auto auto;
     grid-template-areas:
     'nav nav'
     'main-head sidebar-head'
+    'main-head sidebar-main'    
     'main-nom sidebar-main'
-    'main sidebar-main'
     'main sidebar-main'
     'main sidebar-footer'
     'main-footer sidebar-footer'
+    'footer footer'
     'footer footer';
-    width: 900px;
+    width: 1000px;
     background-color: white;
+    grid-gap: 10px 15px;
 }
+                                                /* Begin Nav */
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 75px;
     grid-area: nav;
     background: linear-gradient(grey, black);
     grid-template-areas: 
@@ -85,25 +88,294 @@
     margin-bottom: 10px;
     
 }
-
-
+                                                    /*End Nav*/
+                                                   /*Begin Bio*/
 .bio {
     display: flex;
-    justify-content: flex-start;
+        margin-left: 15px;
+    align-items:flex-start;
     grid-area: main-head;
+    border: 2px;
+    border-color: rgb(216, 210, 210);
+    border-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    grid-row-gap: 10px;
 }
+.bio-pic {
+    display: flex;
+    align-items: stretch;
+}
+.bio-p-1 {
+    font-size: 15px;
+    margin-left: 10px;
+    color:rgb(70, 67, 67);
+}
+.bio-p-2 {
+    font-size: 15px;
+    margin-left: 10px;
+    color: rgb(70, 67, 67);
+}
+.bio-name {
+    margin-left: 12px;
+    margin-bottom: 5px;
+}
+.bio-job-titles {
+    font-size: 13px;
+    color: rgb(216, 210, 210);
+    margin-left: 10px;
+    margin-top: 0px;
+    
+}
+.bio-line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: space-between;
+    border-color: rgb(216, 210, 210);
+    background-color: rgb(216, 210, 210);
+}
+                                                     /*End Bio*/
 .nom {
+    display: flex;
+    align-self: center;
     grid-area: main-nom;
+    border: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgb(219, 219, 140);
+    background-color: rgb(219, 219, 140);
+    margin-left: 15px;
 }
+                                                /*Begin Filmography*/
 .filmography {
     display: grid;
+        grid-template-columns: 5fr 2fr;
+        grid-template-rows: 50px 25px 50px 50px 75px 100px 150px;
+        grid-template-areas: 
+        'header header-selector'
+        'actress blank'
+        'eloise date1'
+        'saint date2'
+        'conman date3'
+        'princess date4'
+        'banshee date5';
     grid-area: main;
+    margin-left: 15px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgb(216, 210, 210);
 }
+.filmography-header {
+    grid-area: header;
+    margin: 0px;
+    padding:0px;
+    align-self: center;
+}
+.pain-in-my-ass {
+    margin: 0px;
+    padding: 0px;
+}
+.filmography-selector {
+    grid-area: header-selector;
+    width: 130px;
+    height: 2px;
+    align-self: center;
+    justify-self: end;
+}
+.actress {
+    grid-area: actress;
+    align-self: center;
+    margin: 0px;
+    padding: 0px;
+}
+.actress-p1 {
+    margin: 0px;
+    padding: 0px;
+}
+.eloise {
+    grid-area: eloise;
+    align-self: center;
+}
+    .eloise-p1 {
+        margin: 0px;
+        padding: 0px;
+        align-self: center;
+    }
+    .eloise-p2 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+        .date1 {
+        grid-area: date1;
+        justify-self: end;
+        align-self: center;
+        margin: 0px;
+        padding:0px;
+    }
+.saint {
+    grid-area: saint;
+    align-self: center;
+}
+    .saint-p1 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+        .date2 {
+            grid-area: date2;
+            justify-self: end;
+            align-self: center;
+            margin: 0px;
+            padding:0px;
+        }
+.conman {
+    grid-area: conman;
+    align-self: center;
+}
+    .conman-p1 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .conman-p2 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .conman-p3 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+        .date3 {
+            grid-area: date3;
+            justify-self: end;
+            align-self: center;
+            margin: 0px;
+            padding:0px;
+        }
+.princess {
+    grid-area: princess;
+    align-self: center;
+}
+    .princess-p1 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .princess-p2 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .princess-p3 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+        .date4 {
+            grid-area: date4;
+            justify-self: end;
+            align-self: center;
+            margin: 0px;
+            padding:0px;
+        }
+.banshee {
+    grid-area: banshee;
+    align-self: center;
+}
+    .banshee-p1 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .banshee-p2 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .banshee-p3 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .banshee-p4 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .banshee-p5 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .banshee-p6 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+    .banshee-p7 {
+        margin: 0px;
+        padding:0px;
+        align-self: center;
+    }
+        .date5 {
+            grid-area: date5;
+            justify-self: end;
+            align-self: start;
+            margin: 0px;
+            padding:0px;
+        }   
+.p {
+    margin: 0px;
+}
+                                                     /*End Filmography*/
 .quick-links {
     grid-area: sidebar-head;
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40px 20px 20px 20px 40px;
+        grid-template-areas: 
+        'header header'
+        'bio film'
+        'awards trailers'
+        'photogallery blank'
+        'explore blank';
+        background-color: lightgrey;
+        border-radius: 7px;
+        box-shadow: -1px 3px 10px -1px rgba(0,0,0,0.75);
+        margin-right: 5px;
+}
+.ql {
+    grid-area: header;
+}
+.bio2 {
+    grid-area: bio;
+}
+.film {
+    grid-area: film;
+}
+.awards {
+    grid-area: awards;
+}
+.trailers {
+    grid-area: trailers;
+}
+.explore {
+    grid-area: explore;
 }
 .sidebar-main {
     grid-area: sidebar-main;
+    background-color: lightgrey;
+    border-radius: 7px;
+    box-shadow: -1px 3px 10px -1px rgba(0,0,0,0.75);
+    margin-right: 5px;
 }
 .related-news {
     grid-area: sidebar-footer;
